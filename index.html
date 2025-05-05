@@ -1,43 +1,4 @@
-<script type="text/javascript">
-        var gk_isXlsx = false;
-        var gk_xlsxFileLookup = {};
-        var gk_fileData = {};
-        function filledCell(cell) {
-          return cell !== '' && cell != null;
-        }
-        function loadFileData(filename) {
-        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
-            try {
-                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
-                var firstSheetName = workbook.SheetNames[0];
-                var worksheet = workbook.Sheets[firstSheetName];
-
-                // Convert sheet to JSON to filter blank rows
-                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
-                // Filter out blank rows (rows where all cells are empty, null, or undefined)
-                var filteredData = jsonData.filter(row => row.some(filledCell));
-
-                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
-                var headerRowIndex = filteredData.findIndex((row, index) =>
-                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
-                );
-                // Fallback
-                if (headerRowIndex === -1 || headerRowIndex > 25) {
-                  headerRowIndex = 0;
-                }
-
-                // Convert filtered JSON back to CSV
-                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
-                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
-                return csv;
-            } catch (e) {
-                console.error(e);
-                return "";
-            }
-        }
-        return gk_fileData[filename] || "";
-        }
-        </script><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
@@ -62,11 +23,11 @@
 </head>
 <body class="bg-gray-100 font-sans">
   <!-- Cabeçalho -->
-  <header class="bg-blue-600 text-white py-4">
-    <div class="container mx-auto px-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold">Soluções Climatização</h1>
+  <header class="bg-blue-800 text-white py-4">
+    <div class="container mx-auto px-4 flex flex-col items-center">
+      <h1 class="text-2xl font-bold mb-2">Soluções Climatização</h1>
       <nav>
-        <ul class="flex space-x-4">
+        <ul class="flex space-x-4 text-sm">
           <li><a href="#servicos" class="hover:underline">Serviços</a></li>
           <li><a href="#sobre" class="hover:underline">Sobre</a></li>
           <li><a href="#contato" class="hover:underline">Contato</a></li>
@@ -80,7 +41,7 @@
     <div class="container mx-auto px-4">
       <h2 class="text-4xl font-bold mb-4">Instalação e Manutenção de Ar-Condicionado em Cuiabá</h2>
       <p class="text-lg mb-6">Serviços profissionais de instalação, limpeza, desinstalação e manutenção preventiva para garantir o conforto da sua casa ou empresa.</p>
-      <a href="#contato" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">Entre em Contato</a>
+      <a href="#contato" class="bg-blue-800 text-white px-6 py-3 rounded-lg hover:bg-blue-900">Entre em Contato</a>
     </div>
   </section>
 
@@ -90,25 +51,25 @@
       <h2 class="text-3xl font-bold text-center mb-8">Nossos Serviços</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-          <img src="https://via.placeholder.com/300x200?text=Instalação" alt="Instalação de ar-condicionado" class="mb-4 mx-auto">
+          <img src="imagens/instalacao.jpg" alt="Instalação de ar-condicionado" class="mb-4 mx-auto">
           <h3 class="text-xl font-semibold mb-2">Instalação de Ar-Condicionado</h3>
           <p class="mb-4">Instalação profissional para garantir o melhor desempenho do seu aparelho, com segurança e eficiência.</p>
           <a href="https://wa.me/5565993591390?text=Quero%20agendar%20uma%20instalação%20de%20ar-condicionado" class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600">Agendar via WhatsApp</a>
         </div>
         <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-          <img src="https://via.placeholder.com/300x200?text=Limpeza" alt="Limpeza de ar-condicionado" class="mb-4 mx-auto">
+          <img src="imagens/limpeza.jpg" alt="Limpeza de ar-condicionado" class="mb-4 mx-auto">
           <h3 class="text-xl font-semibold mb-2">Limpeza de Ar-Condicionado</h3>
           <p class="mb-4">Limpeza completa para remover poeira, bactérias e fungos, garantindo um ar mais saudável.</p>
           <a href="https://wa.me/5565993591390?text=Quero%20agendar%20uma%20limpeza%20de%20ar-condicionado" class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600">Agendar via WhatsApp</a>
         </div>
         <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-          <img src="https://via.placeholder.com/300x200?text=Desinstalação" alt="Desinstalação de ar-condicionado" class="mb-4 mx-auto">
+          <img src="imagens/desinstalacao.jpg" alt="Desinstalação de ar-condicionado" class="mb-4 mx-auto">
           <h3 class="text-xl font-semibold mb-2">Desinstalação</h3>
           <p class="mb-4">Remoção segura e eficiente do seu ar-condicionado, ideal para mudanças ou substituições.</p>
           <a href="https://wa.me/5565993591390?text=Quero%20agendar%20uma%20desinstalação%20de%20ar-condicionado" class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600">Agendar via WhatsApp</a>
         </div>
         <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-          <img src="https://via.placeholder.com/300x200?text=Manutenção" alt="Manutenção de ar-condicionado" class="mb-4 mx-auto">
+          <img src="imagens/manutencao.jpg" alt="Manutenção de ar-condicionado" class="mb-4 mx-auto">
           <h3 class="text-xl font-semibold mb-2">Manutenção Preventiva</h3>
           <p class="mb-4">Manutenção regular para prolongar a vida útil do aparelho e evitar gastos com reparos.</p>
           <a href="https://wa.me/5565993591390?text=Quero%20agendar%20uma%20manutenção%20preventiva%20de%20ar-condicionado" class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600">Agendar via WhatsApp</a>
@@ -130,7 +91,7 @@
       </ul>
       <p class="text-lg text-center">Com a limpeza regular do seu ar-condicionado, você garante um ambiente mais saudável, economiza na conta de luz e prolonga a vida útil do aparelho. Não deixe a sujeira tomar conta do seu conforto!</p>
       <div class="text-center mt-6">
-        <a href="https://wa.me/5565993591390?text=Quero%20agendar%20uma%20limpeza%20de%20ar-condicionado" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">Agende Sua Limpeza Agora</a>
+        <a href="https://wa.me/5565993591390?text=Quero%20agendar%20uma%20limpeza%20de%20ar-condicionado" class="bg-blue-800 text-white px-6 py-3 rounded-lg hover:bg-blue-900">Agende Sua Limpeza Agora</a>
       </div>
     </div>
   </section>
@@ -144,7 +105,7 @@
   </section>
 
   <!-- Contato -->
-  <section id="contato" class="bg-blue-600 text-white py-16">
+  <section id="contato" class="bg-blue-800 text-white py-16">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold text-center mb-8">Entre em Contato</h2>
       <p class="text-lg text-center mb-6">Precisa de instalação, limpeza ou manutenção de ar-condicionado em Cuiabá? Fale conosco!</p>
@@ -152,7 +113,7 @@
         <p class="mb-2"><strong>Telefone:</strong> (65) 99359-1390</p>
         <p class="mb-2"><strong>WhatsApp:</strong> <a href="https://wa.me/5565993591390" class="underline">Clique aqui para chamar</a></p>
         <p class="mb-2"><strong>Endereço:</strong> Cuiabá, Mato Grosso</p>
-        <p class="mt-6"><a href="https://wa.me/5565993591390" class="bg-white text-blue-600 px-6 py-3 rounded-lg hover:bg-gray-200">Fale pelo WhatsApp</a></p>
+        <p class="mt-6"><a href="https://wa.me/5565993591390" class="bg-white text-blue-800 px-6 py-3 rounded-lg hover:bg-gray-200">Fale pelo WhatsApp</a></p>
       </div>
     </div>
   </section>
