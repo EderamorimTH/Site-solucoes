@@ -22,7 +22,6 @@
       bottom: 20px;
       right: 20px;
       z-index: 1000;
-      /* Ajuste para telas pequenas */
       @media (max-width: 640px) {
         bottom: 10px;
         right: 10px;
@@ -79,38 +78,29 @@
       <h2 class="text-3xl font-bold text-center mb-8">Nossos Serviços em Cuiabá</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-          <!-- Nota: Converta imagens para WebP e use lazy loading -->
-          <img src="imagens/instalacao.webp" alt="Instalação profissional de ar-condicionado em Cuiabá" width="200" height="150" class="mb-4 mx-auto" loading="lazy">
+          <img src="/imagens/instalacao.jpg?v=1" alt="Instalação profissional de ar-condicionado em Cuiabá" width="200" height="150" class="mb-4 mx-auto" loading="lazy" onerror="this.src='/imagens/fallback.jpg'">
           <h3 class="text-xl font-semibold mb-2">Instalação de Ar-Condicionado</h3>
           <p class="mb-4">Instalação profissional para garantir o melhor desempenho do seu aparelho, com segurança e eficiência.</p>
           <a href="https://wa.me/5565993591390?text=Quero%20agendar%20uma%20instalação%20de%20ar-condicionado&utm_source=website&utm_medium=button&utm_campaign=instalacao" class="bg-navy-blue text-white px-4 py-2 rounded-lg hover:bg-blue-900" data-gtm-event="click_instalacao">Agendar via WhatsApp</a>
         </div>
         <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-          <img src="imagens/limpeza.webp" alt="Limpeza de ar-condicionado em Cuiabá" width="200" height="150" class="mb-4 mx-auto" loading="lazy">
+          <img src="/imagens/limpeza.jpg?v=1" alt="Limpeza de ar-condicionado em Cuiabá" width="200" height="150" class="mb-4 mx-auto" loading="lazy" onerror="this.src='/imagens/fallback.jpg'">
           <h3 class="text-xl font-semibold mb-2">Limpeza de Ar-Condicionado</h3>
           <p class="mb-4">Limpeza completa para remover poeira, bactérias e fungos, garantindo um ar mais saudável.</p>
           <a href="https://wa.me/5565993591390?text=Quero%20agendar%20uma%20limpeza%20de%20ar-condicionado&utm_source=website&utm_medium=button&utm_campaign=limpeza" class="bg-navy-blue text-white px-4 py-2 rounded-lg hover:bg-blue-900" data-gtm-event="click_limpeza">Agendar via WhatsApp</a>
         </div>
         <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-          <img src="imagens/desinstalacao.webp" alt="Desinstalação de ar-condicionado em Cuiabá" width="200" height="150" class="mb-4 mx-auto" loading="lazy">
+          <img src="/imagens/desinstalacao.jpg?v=1" alt="Desinstalação de ar-condicionado em Cuiabá" width="200" height="150" class="mb-4 mx-auto" loading="lazy" onerror="this.src='/imagens/fallback.jpg'">
           <h3 class="text-xl font-semibold mb-2">Desinstalação</h3>
           <p class="mb-4">Remoção segura e eficiente do seu ar-condicionado, ideal para mudanças ou substituições.</p>
           <a href="https://wa.me/5565993591390?text=Quero%20agendar%20uma%20desinstalação%20de%20ar-condicionado&utm_source=website&utm_medium=button&utm_campaign=desinstalacao" class="bg-navy-blue text-white px-4 py-2 rounded-lg hover:bg-blue-900" data-gtm-event="click_desinstalacao">Agendar via WhatsApp</a>
         </div>
         <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-          <img src="imagens/manutencao.webp" alt="Manutenção preventiva de ar-condicionado em Cuiabá" width="200" height="150" class="mb-4 mx-auto" loading="lazy">
+          <img src="/imagens/manutencao.jpg?v=1" alt="Manutenção preventiva de ar-condicionado em Cuiabá" width="200" height="150" class="mb-4 mx-auto" loading="lazy" onerror="this.src='/imagens/fallback.jpg'">
           <h3 class="text-xl font-semibold mb-2">Manutenção Preventiva</h3>
           <p class="mb-4">Manutenção regular para prolongar a vida útil do aparelho e evitar gastos com reparos.</p>
           <a href="https://wa.me/5565993591390?text=Quero%20agendar%20uma%20manutenção%20preventiva%20de%20ar-condicionado&utm_source=website&utm_medium=button&utm_campaign=manutencao" class="bg-navy-blue text-white px-4 py-2 rounded-lg hover:bg-blue-900" data-gtm-event="click_manutencao">Agendar via WhatsApp</a>
         </div>
-      </div>
-      <!-- Vídeo de Demonstração -->
-      <div class="text-center mt-8">
-        <h3 class="text-xl font-semibold mb-4">Veja como fazemos a limpeza!</h3>
-        <video width="320" height="240" controls class="mx-auto">
-          <source src="videos/limpeza.mp4" type="video/mp4">
-          Seu navegador não suporta o vídeo.
-        </video>
       </div>
     </div>
   </section>
@@ -148,7 +138,7 @@
         <li>Levar a danos no aparelho, exigindo reparos caros.</li>
       </ul>
       <p class="text-lg text-center">Com a limpeza regular do seu ar-condicionado, você garante um ambiente mais saudável, economiza na conta de luz e prolonga a vida útil do aparelho. Não deixe a sujeira tomar conta do seu conforto!</p>
-      <a href="https://wa.me/5565993591390?text=Qu|Quero%20agendar%20a%20limpeza%20do%20meu%20ar-condicionado&utm_source=website&utm_medium=button&utm_campaign=limpeza" class="bg-navy-blue text-white px-6 py-3 rounded-lg hover:bg-blue-900 mt-4 inline-block" data-gtm-event="click_limpeza_agendar">Agende Sua Limpeza Agora</a>
+      <a href="https://wa.me/5565993591390?text=Quero%20agendar%20a%20limpeza%20do%20meu%20ar-condicionado&utm_source=website&utm_medium=button&utm_campaign=limpeza" class="bg-navy-blue text-white px-6 py-3 rounded-lg hover:bg-blue-900 mt-4 inline-block" data-gtm-event="click_limpeza_agendar">Agende Sua Limpeza Agora</a>
     </div>
   </section>
 
