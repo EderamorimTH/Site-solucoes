@@ -12,9 +12,17 @@
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id=GTM-XXXXXXX'+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-1234567');</script> <!-- Substitua GTM-1234567 pelo seu ID real -->
   <!-- End Google Tag Manager -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17058509623"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17058509623');
+  </script>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     .whatsapp-float {
@@ -42,169 +50,13 @@
 </head>
 <body class="bg-gray-100 font-sans">
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-1234567"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <!-- Substitua GTM-1234567 pelo seu ID real -->
   <!-- End Google Tag Manager (noscript) -->
 
-  <!-- Cabeçalho (substituí o texto pelo logo) -->
+  <!-- Cabeçalho -->
   <header class="bg-navy-blue text-white py-4">
     <div class="container mx-auto px-4 flex flex-col items-center">
       <img src="imagens/logo.jpg" alt="Logo Soluções Climatização" class="mb-2" style="max-width: 300px;">
       <nav>
-        <ul class="flex space-x-4 text-sm">
-          <li><a href="#servicos" class="hover:underline">Serviços</a></li>
-          <li><a href="#sobre" class="hover:underline">Sobre</a></li>
-          <li><a href="#contato" class="hover:underline">Contato</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Hero Section (removi o desconto do Google Ads) -->
-  <section class="bg-blue-200 py-16 text-center">
-    <div class="container mx-auto px-4">
-      <h2 class="text-4xl font-bold mb-4">Instalação e Manutenção de Ar-Condicionado em Cuiabá e Região</h2>
-      <p class="text-lg mb-6">Serviços profissionais de instalação, limpeza, desinstalação e manutenção preventiva para garantir o conforto da sua casa ou empresa.</p>
-      <a href="#contato" class="bg-navy-blue text-white px-6 py-3 rounded-lg hover:bg-blue-900">Entre em Contato</a>
-    </div>
-  </section>
-
-  <!-- Serviços -->
-  <section id="servicos" class="py-16">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-8">Nossos Serviços em Cuiabá</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-          <img src="imagens/instalacao.jpg" alt="Instalação profissional de ar-condicionado em Cuiabá" width="200" height="150" class="mb-4 mx-auto" loading="lazy">
-          <h3 class="text-xl font-semibold mb-2">Instalação de Ar-Condicionado</h3>
-          <p class="mb-4">Instalação profissional para garantir o melhor desempenho do seu aparelho, com segurança e eficiência.</p>
-          <a href="https://wa.me/5565993591390?text=Quero%20agendar%20uma%20instalação%20de%20ar-condicionado&utm_source=website&utm_medium=button&utm_campaign=instalacao" class="bg-navy-blue text-white px-4 py-2 rounded-lg hover:bg-blue-900" data-gtm-event="click_instalacao">Agendar via WhatsApp</a>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-          <img src="imagens/limpeza.jpg" alt="Limpeza de ar-condicionado em Cuiabá" width="200" height="150" class="mb-4 mx-auto" loading="lazy">
-          <h3 class="text-xl font-semibold mb-2">Limpeza de Ar-Condicionado</h3>
-          <p class="mb-4">Limpeza completa para remover poeira, bactérias e fungos, garantindo um ar mais saudável.</p>
-          <a href="https://wa.me/5565993591390?text=Quero%20agendar%20uma%20limpeza%20de%20ar-condicionado&utm_source=website&utm_medium=button&utm_campaign=limpeza" class="bg-navy-blue text-white px-4 py-2 rounded-lg hover:bg-blue-900" data-gtm-event="click_limpeza">Agendar via WhatsApp</a>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-          <img src="imagens/desinstalacao.jpg" alt="Desinstalação de ar-condicionado em Cuiabá" width="200" height="150" class="mb-4 mx-auto" loading="lazy">
-          <h3 class="text-xl font-semibold mb-2">Desinstalação</h3>
-          <p class="mb-4">Remoção segura e eficiente do seu ar-condicionado, ideal para mudanças ou substituições.</p>
-          <a href="https://wa.me/5565993591390?text=Quero%20agendar%20uma%20desinstalação%20de%20ar-condicionado&utm_source=website&utm_medium=button&utm_campaign=desinstalacao" class="bg-navy-blue text-white px-4 py-2 rounded-lg hover:bg-blue-900" data-gtm-event="click_desinstalacao">Agendar via WhatsApp</a>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-          <img src="imagens/manutencao.jpg" alt="Manutenção preventiva de ar-condicionado em Cuiabá" width="200" height="150" class="mb-4 mx-auto" loading="lazy">
-          <h3 class="text-xl font-semibold mb-2">Manutenção Preventiva</h3>
-          <p class="mb-4">Manutenção regular para prolongar a vida útil do aparelho e evitar gastos com reparos.</p>
-          <a href="https://wa.me/5565993591390?text=Quero%20agendar%20uma%20manutenção%20preventiva%20de%20ar-condicionado&utm_source=website&utm_medium=button&utm_campaign=manutencao" class="bg-navy-blue text-white px-4 py-2 rounded-lg hover:bg-blue-900" data-gtm-event="click_manutencao">Agendar via WhatsApp</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testemunhos -->
-  <section id="depoimentos" class="bg-gray-100 py-16">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-8">O Que Nossos Clientes Dizem</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-          <p class="mb-4">"Serviço rápido e profissional! Meu ar-condicionado está como novo."</p>
-          <p class="font-semibold">João S.</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-          <p class="mb-4">"A limpeza fez toda a diferença. O ar está mais fresco e sem cheiro!"</p>
-          <p class="font-semibold">Maria L.</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-          <p class="mb-4">"Instalaram meu ar-condicionado em tempo recorde. Super recomendo!"</p>
-          <p class="font-semibold">Carlos R.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Importância da Limpeza -->
-  <section class="bg-gray-200 py-16">
-    <div class="container mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-8">Por Que é Importante Lavar o Ar-Condicionado em Cuiabá?</h2>
-      <p class="text-lg mb-6">Você sabia que um ar-condicionado sujo pode causar problemas sérios? Poeira, fungos e bactérias acumulados nos filtros podem:</p>
-      <ul class="list-disc list-inside mx-auto max-w-2xl mb-6">
-        <li>Provocar alergias, crises de rinite e problemas respiratórios.</li>
-        <li>Reduzir a eficiência do aparelho, aumentando o consumo de energia.</li>
-        <li>Causar mau cheiro no ambiente.</li>
-        <li>Levar a danos no aparelho, exigindo reparos caros.</li>
-      </ul>
-      <p class="text-lg text-center">Com a limpeza regular do seu ar-condicionado, você garante um ambiente mais saudável, economiza na conta de luz e prolonga a vida útil do aparelho. Não deixe a sujeira tomar conta do seu conforto!</p>
-      <a href="https://wa.me/5565993591390?text=Quero%20agendar%20a%20limpeza%20do%20meu%20ar-condicionado&utm_source=website&utm_medium=button&utm_campaign=limpeza" class="bg-navy-blue text-white px-6 py-3 rounded-lg hover:bg-blue-900 mt-4 inline-block" data-gtm-event="click_limpeza_agendar">Agende Sua Limpeza Agora</a>
-    </div>
-  </section>
-
-  <!-- Atenção com o Fluido R32 -->
-  <section class="bg-yellow-100 py-8">
-    <div class="container mx-auto px-4 text-center">
-      <h2 class="text-2xl font-bold mb-4">Atenção com o Fluido R32!</h2>
-      <p class="text-lg mb-4">O fluido R32, presente em muitos modelos de ar-condicionado, é <strong>mais eficiente</strong> e <strong>menos agressivo ao meio ambiente</strong> do que outros fluidos refrigerantes. No entanto, é importante tratar e manuseá-lo com cuidado. O R32 é <strong>inflamável</strong> e, se não for instalado e mantido corretamente, pode apresentar riscos.</p>
-      <p class="text-lg">Por isso, é fundamental contar com profissionais qualificados para a instalação, manutenção e limpeza do seu aparelho de ar-condicionado que utiliza o fluido R32.</p>
-      <a href="https://wa.me/5565993591390?text=Quero%20mais%20informações%20sobre%20o%20fluido%20R32&utm_source=website&utm_medium=button&utm_campaign=r32" class="bg-navy-blue text-white px-6 py-3 rounded-lg hover:bg-blue-900 mt-4 inline-block" data-gtm-event="click_r32_info">Saiba Mais</a>
-    </div>
-  </section>
-
-  <!-- Dicas -->
-  <section id="dicas" class="py-16">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-8">Dicas para Economizar com Ar-Condicionado</h2>
-      <p class="text-lg text-center max-w-3xl mx-auto mb-6">Quer reduzir sua conta de luz? Confira nossas dicas:</p>
-      <ul class="list-disc list-inside mx-auto max-w-2xl">
-        <li>Mantenha os filtros limpos para melhorar a eficiência.</li>
-        <li>Use a temperatura ideal (24ºC é suficiente para conforto).</li>
-        <li>Feche portas e janelas para evitar perda de ar frio.</li>
-      </ul>
-      <p class="text-center mt-6"><a href="https://wa.me/5565993591390?text=Quero%20mais%20dicas%20para%20economizar%20com%20ar-condicionado&utm_source=website&utm_medium=button&utm_campaign=dicas" class="bg-navy-blue text-white px-6 py-3 rounded-lg hover:bg-blue-900" data-gtm-event="click_dicas">Peça Mais Dicas</a></p>
-    </div>
-  </section>
-
-  <!-- Sobre -->
-  <section id="sobre" class="py-16">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-8">Sobre Nós</h2>
-      <p class="text-lg text-center max-w-3xl mx-auto">Na Soluções Climatização, somos especialistas em instalação, limpeza, desinstalação e manutenção de ar-condicionado em Cuiabá e região. Nosso compromisso é oferecer serviços de qualidade, com atendimento rápido e preços justos, para que você possa aproveitar o conforto do seu ambiente sem preocupações.</p>
-    </div>
-  </section>
-
-  <!-- Contato -->
-  <section id="contato" class="bg-navy-blue text-white py-16">
-    <div class="container mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-8">Entre em Contato</h2>
-      <p class="text-lg mb-6">Precisa de instalação, limpeza ou manutenção de ar-condicionado em Cuiabá? Fale conosco!</p>
-      <div>
-        <p class="mb-2"><strong>Telefone:</strong> (65) 99359-1390</p>
-        <p class="mb-2"><strong>WhatsApp:</strong> <a href="https://wa.me/5565993591390?utm_source=website&utm_medium=link&utm_campaign=contato" class="underline">Clique aqui para chamar</a></p>
-        <p class="mb-2"><strong>Endereço:</strong> Cuiabá, Mato Grosso</p>
-        <p class="mt-6"><a href="https://wa.me/5565993591390?utm_source=website&utm_medium=button&utm_campaign=contato" class="bg-white text-navy-blue px-6 py-3 rounded-lg hover:bg-gray-200" data-gtm-event="click_contato">Fale pelo WhatsApp</a></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Botão Flutuante WhatsApp -->
-  <div class="whatsapp-float">
-    <a href="https://wa.me/5565993591390?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20os%20serviços&utm_source=website&utm_medium=float&utm_campaign=whatsapp" target="_blank" aria-label="Fale conosco pelo WhatsApp">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Ícone do WhatsApp para contato">
-    </a>
-  </div>
-
-  <!-- Rodapé -->
-  <footer class="bg-gray-800 text-white py-4">
-    <div class="container mx-auto px-4 text-center">
-      <p>© 2025 Soluções Climatização. Todos os direitos reservados.</p>
-      <div class="mt-2">
-        <a href="/politica-de-privacidade" class="underline mx-2">Política de Privacidade</a>
-        <a href="/termos-de-uso" class="underline mx-2">Termos de Uso</a>
-      </div>
-      <div class="mt-2 flex justify-center space-x-4">
-        <a href="https://instagram.com/solucoesclimatizacao" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Ícone do Instagram" width="24" height="24"></a>
-        <a href="https://facebook.com/solucoesclimatizacao" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Ícone do Facebook" width="24" height="24"></a>
-      </div>
-    </div>
-  </footer>
-</body>
-</html>
+        <ul class="flex
