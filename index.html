@@ -24,7 +24,7 @@
     .bg-navy-blue { background-color: #000080; }
     .hover\:bg-navy-blue:hover { background-color: #000080; }
     .map-container { margin-top: 20px; border: 2px solid #fff; border-radius: 8px; overflow: hidden; }
-    .map-container iframe { width: 100%; height: 200px; border: none; }
+    .map-container iframe { width: 100%; height: 300px; border: none; }
   </style>
 </head>
 <body class="bg-gray-100 font-sans">
@@ -34,12 +34,14 @@
     <div class="container mx-auto px-4 flex flex-col items-center">
       <img src="imagens/logo.jpg" alt="Logo Soluções Climatização" class="mb-2" style="max-width: 300px;">
       <nav>
-        <ul class="flex space-x-4 text-sm">
+        <ul class="flex space-x-4 text-sm flex-wrap justify-center">
+          <li><a href="index.html" class="hover:underline">Início</a></li>
           <li><a href="servicos.html" class="hover:underline">Serviços</a></li>
+          <li><a href="/instalacao-ar-condicionado-cuiaba/" class="hover:underline">Instalação</a></li>
+          <li><a href="/limpeza-ar-condicionado/" class="hover:underline">Limpeza</a></li>
           <li><a href="sobre.html" class="hover:underline">Sobre</a></li>
           <li><a href="contato.html" class="hover:underline">Contato</a></li>
           <li><a href="dicas.html" class="hover:underline">Dicas</a></li>
-          <li><a href="#depoimentos" class="hover:underline">Depoimentos</a></li>
         </ul>
       </nav>
     </div>
@@ -58,19 +60,19 @@
   <section id="servicos" class="py-16">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold text-center mb-8">Nossos Serviços em Cuiabá</h2>
-      <p class="text-center mb-6">Oferecemos soluções completas para instalação de ar condicionado em Cuiabá e limpeza de ar condicionado em Cuiabá, com atendimento rápido e profissionais qualificados.</p>
+      <p class="text-center mb-6">Especialistas em instalação de ar condicionado em Cuiabá e limpeza de ar condicionado em Cuiabá, com atendimento rápido e profissionais qualificados.</p>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <div class="bg-white p-6 rounded-lg shadow-lg text-center">
           <img src="imagens/instalacao.jpg" alt="Instalação de ar condicionado em Cuiabá" width="200" height="150" class="mb-4 mx-auto" loading="lazy">
           <h3 class="text-xl font-semibold mb-2">Instalação de Ar Condicionado em Cuiabá</h3>
           <p class="mb-4">Instalação segura e eficiente para novos aparelhos ou reposição, com foco em desempenho e economia de energia em Cuiabá, Coxipó, CPA e Várzea Grande.</p>
-          <a href="https://wa.me/5565993591390?text=Quero%20agendar%20uma%20instalação%20de%20ar-condicionado%20em%20Cuiabá&utm_source=website&utm_medium=button&utm_campaign=instalacao" class="bg-navy-blue text-white px-4 py-2 rounded-lg hover:bg-blue-900">Agendar via WhatsApp</a>
+          <a href="/instalacao-ar-condicionado-cuiaba/" class="bg-navy-blue text-white px-4 py-2 rounded-lg hover:bg-blue-900">Saiba mais</a>
         </div>
         <div class="bg-white p-6 rounded-lg shadow-lg text-center">
           <img src="imagens/limpeza.jpg" alt="Limpeza de ar condicionado em Cuiabá" width="200" height="150" class="mb-4 mx-auto" loading="lazy">
           <h3 class="text-xl font-semibold mb-2">Limpeza de Ar Condicionado em Cuiabá</h3>
           <p class="mb-4">Limpeza profunda para remover sujeira, bactérias e melhorar a qualidade do ar no seu ambiente em Cuiabá e região.</p>
-          <a href="https://wa.me/5565993591390?text=Quero%20agendar%20uma%20limpeza%20de%20ar-condicionado%20em%20Cuiabá&utm_source=website&utm_medium=button&utm_campaign=limpeza" class="bg-navy-blue text-white px-4 py-2 rounded-lg hover:bg-blue-900">Agendar via WhatsApp</a>
+          <a href="/limpeza-ar-condicionado/" class="bg-navy-blue text-white px-4 py-2 rounded-lg hover:bg-blue-900">Saiba mais</a>
         </div>
         <div class="bg-white p-6 rounded-lg shadow-lg text-center">
           <img src="imagens/desinstalacao.jpg" alt="Desinstalação de ar condicionado em Cuiabá" width="200" height="150" class="mb-4 mx-auto" loading="lazy">
@@ -85,7 +87,18 @@
           <a href="https://wa.me/5565993591390?text=Quero%20agendar%20uma%20manutenção%20preventiva%20de%20ar-condicionado&utm_source=website&utm_medium=button&utm_campaign=manutencao" class="bg-navy-blue text-white px-4 py-2 rounded-lg hover:bg-blue-900">Agendar via WhatsApp</a>
         </div>
       </div>
-      <p class="text-center mt-6"><a href="servicos.html" class="bg-navy-blue text-white px-6 py-3 rounded-lg hover:bg-blue-900">Saiba mais sobre nossos serviços</a></p>
+      <p class="text-center mt-6"><a href="servicos.html" class="bg-navy-blue text-white px-6 py-3 rounded-lg hover:bg-blue-900">Ver todos os serviços</a></p>
+    </div>
+  </section>
+
+  <!-- Mapa -->
+  <section class="py-8 bg-gray-200">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-6">Atendemos em Cuiabá e Região</h2>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3842.5735827036424!2d-56.08665092503459!3d-15.61441551854883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x939db1517a74792b%3A0xf1e8c0ee3f8d46a1!2zU29sdcOhb2vDsnMgxJljbGltYXRpemHDp8OjbyBBciBDb25kaWNpb25hZG8!5e0!3m2!1spt-BR!2sbr!4v1747345402249!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <p class="text-center mt-4 text-gray-700">Coxipó, CPA, Várzea Grande e toda Cuiabá – atendimento rápido!</p>
     </div>
   </section>
 
